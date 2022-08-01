@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "SCProRegular"; src: url("/fonts/SourceCodePro-Regular.ttf");
+  font-family: "SCProBold"; src: url("/fonts/SourceCodePro-Black.ttf");
+}
+
+ion-icon {
+  color: #FFF;
+  font-size: 30px;
+}
