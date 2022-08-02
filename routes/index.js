@@ -3,7 +3,8 @@ var router = express.Router();
 
 router.get('/', (req, res) => {
   res.render('index', {
-    title: 'Socio-Civic'
+    title: 'Socio-Civic',
+    tagline: 'Collaboration. Commitment. Cooperation.'
   });
 });
 
