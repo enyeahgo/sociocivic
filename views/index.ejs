@@ -15,16 +15,18 @@
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
-  <nav class="navbar navbar-dark bg-primary position-relative d-flex justify-content-between p-2">
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-dark bg-primary position-relative d-flex justify-content-between p-1">
     <a class="navbar-brand" href="/">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-sm-6">
+          <div class="col-2">
             <img src="/img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+          </div>
+          <div class="col-10" style="line-height: 12px;">
             <span style="font-family: SCProRegular, monospace"><%= title%></span><br>
             <span style="font-size: 10px;"><%= tagline%></span>
-          </div>
-          <div class="col-sm-6">
           </div> 
         </div> 
         
@@ -34,6 +36,7 @@
       <ion-icon name="menu-outline" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"></ion-icon>
     </div>
   </nav>
+  <!-- * Navigation Bar -->
 
   <div class="container py-3">
 
@@ -41,15 +44,9 @@
     <div class="row d-flex justify-content-center mb-3">
       <div class="col-sm-8">
             <div class="carousel">
-              <div>
-                <img src="/img/carousel/c1.jpeg" width="100%" style="border-radius: 10px;">
-              </div>
-              <div>
-                <img src="/img/carousel/c2.jpeg" width="100%" style="border-radius: 10px;">
-              </div>
-              <div>
-                <img src="/img/carousel/c3.jpeg" width="100%" style="border-radius: 10px;">
-              </div>
+              <div class="carouselitem" style="width: 100%; background-image: url('<%= images[0]%>'); background-size: cover; background-position: center; border-radius: 10px;"></div>
+              <div class="carouselitem" style="width: 100%; background-image: url('<%= images[1]%>'); background-size: cover; background-position: center; border-radius: 10px;"></div>
+              <div class="carouselitem" style="width: 100%; background-image: url('<%= images[2]%>'); background-size: cover; background-position: center; border-radius: 10px;"></div>
             </div>
       </div>
     </div>
@@ -78,7 +75,12 @@
   
   <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
     <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5> <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button> </div> <div class="offcanvas-body"> <div> Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel"><%= title%></h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div>
+        "<%= quote%>"
       </div>
       <div class="dropdown mt-3">
         <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"> Dropdown button
