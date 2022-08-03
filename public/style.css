@@ -1,3 +1,7 @@
+body {
+  background-color: whitesmoke;
+}
+
 @font-face {
   font-family: "SCProRegular"; src: url("/fonts/SourceCodePro-Regular.ttf");
   font-family: "SCProBold"; src: url("/fonts/SourceCodePro-Black.ttf");
